@@ -12,7 +12,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 @RequestMapping("/survey")
-public class SurverController {
+public class SurveyController {
 
 	@GetMapping("/form")
 	public String form(SurveyForm surveyForm, Model model, @ModelAttribute("complete") String complete) {
@@ -54,6 +54,5 @@ public class SurverController {
 		redirectAttributes.addFlashAttribute("complete", "Thanks for your cooperation!");
 		return "redirect:/survey/form";
 	}
-
 
 }
